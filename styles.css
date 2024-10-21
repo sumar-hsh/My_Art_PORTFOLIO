@@ -1,0 +1,264 @@
+/* styles.css */
+
+/* Set the background color to black */
+body {
+  background-color: black;
+  color: white; /* Optional: to make text white for better visibility */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+/* Shapes */
+.random-shape {
+  position: absolute;
+  /* width: 379px;  */
+  /* height: 4300px; */
+  width: 30vw; /* Use viewport width for responsiveness */
+  height: 779vh; /* Use viewport height to cover full screen */
+  background-color: rgba(173, 170, 150, 0.3); /* Semi-transparent white */
+  border-radius: 1px; /* Optional: rounded corners */
+  z-index: -2; /* Behind the navbar */
+  filter: blur(69px); /* Adjust the blur radius to control the fading effect */
+
+}
+
+.random-shape2 {
+  position: absolute; /* Position it absolutely */
+  top: 0; /* Start from the top of the screen */
+  left: 0; /* Align to the left */
+  width: 88px; /* Size of the square */
+  height: 2500px; /* Height of the shape */
+  background-color: rgba(237, 228, 180, 0.197); /* Semi-transparent color */
+  border-radius: 1px; /* Optional: rounded corners */
+  z-index: 11; /* Behind the navbar */
+}
+
+/* Random positions for shapes */
+.shape1 {
+  top: -150%; /* Adjust this as needed to ensure visibility */
+  left: 63%;
+}
+
+.shape2 {
+  top: -150%; /* Adjust this as needed to ensure visibility */
+  left: 1%;
+
+}
+
+.font-shape-color {
+  font-weight: bold;
+  color: rgba(203, 203, 183, 0.559); /* White color with 80% opacity */
+  font-size: 60px; /* Adjust font size as needed */
+  margin-bottom: 110px;
+}
+
+.section-title {
+  margin-top: 10px; /* Adjust the value as needed */
+  margin-bottom: 30px; 
+}
+
+.about-text {
+  font-size: 19px; /* Adjust font size as needed */
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #000000;
+  z-index: 10; /* Ensure the navbar is above the shapes */
+  position: relative; /* Ensure correct stacking context */
+}
+
+/* Style for interactive images */
+.btn-image {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: .25rem;
+  transition: transform 0.3s ease;
+  width: 100%; /* Make sure the container is full width */
+  max-width: 300px; /* Adjust this to your desired image width */
+  height: 400px; /* Adjust this to your desired image height */
+  margin: 15px auto; /* Centering images */
+}
+
+/* Consolidated img styles for clarity */
+.btn-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  box-shadow: 0 4px 15px rgb(255, 255, 255); /* Box shadow effect */
+  transition: transform 0.3s; /* Optional: adds a hover effect */
+}
+
+/* Hover effects for images */
+.btn-image:hover img {
+  transform: scale(1.05); /* Optional: enlarges image on hover */
+}
+
+.btn-image:focus {
+  outline: none;
+}
+
+.carousel-img {
+  width: 400px; /* Set your desired width */
+  height: 500px; /* Set your desired height */
+  object-fit: cover; /* Ensures the image covers the set dimensions without distortion */
+}
+
+.margin-top {
+  margin-top: 130px;
+}
+
+.bg-custom {
+  background-color: #000 !important; /* Set navbar background to black */
+}
+
+
+/* Squares container */
+.squares-container {
+  position: absolute; /* Make the container position absolute */
+  top: -6px; /* Align to the top of the screen */
+  left: 700px; /* Align to the left */
+  width: 100%; /* Full width of the page */
+  height: 2500px; /* Match the height of shape1 */
+  z-index: 3; /* Ensure it's above shape1 but below the navbar */
+}
+
+/* General square styles */
+.square {
+  position: absolute; /* Position each square absolutely */
+  background-color: rgb(0, 0, 0); /* Set the square color to black */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Positioning squares */
+.square1 {
+  width: 50px; height: 50px; top: 100px; left: 100px;
+}
+
+.square2 {
+  width: 70px; height: 70px; top: 150px; left: 160px;
+}
+
+.square3 {
+  width: 40px; height: 40px; top: 200px; left: 250px;
+}
+
+.square4 {
+  width: 60px; height: 60px; top: 300px; left: 200px;
+}
+
+.square5 {
+  width: 80px; height: 80px; top: 100px; left: 270px;
+}
+
+.square6 {
+  width: 30px; height: 30px; top: 260px; left: 250px;
+}
+
+.square7 {
+  width: 50px; height: 50px; top: 250px; left: 300px;
+}
+
+.margin-top-contact {
+  margin-top: 100px;
+}
+
+.tranparent{
+  opacity: 0.5;
+}
+
+.footer-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  color: #000000; /* Custom color */
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.email-link {
+  font-family: 'Courier New', Courier, monospace;
+  color: #e4f6fb; /* Custom color */
+  font-size: 1.1rem;
+  text-decoration: none; /* Remove underline */
+}
+
+.email-link:hover {
+  color: #ffba08; /* Color change on hover */
+  text-decoration: underline; /* Optional underline on hover */
+}
+
+@media (max-width: 768px) {
+  .random-shape {
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Adjust height automatically */
+  }
+
+  /* Shape1 - Move to the right side without overflow */
+  .shape1 {
+    top: 0; /* Align from the top */
+    left: 70%; /* Move towards the right without causing overflow */
+    width: 30vw; /* Adjust width for mobile */
+    height: 300vh; /* Adjust height for mobile */
+    overflow: hidden; /* Prevent overflow */
+  }
+
+  /* Shape2 - Place behind images */
+  .shape2 {
+    top: 0; /* Align from the top */
+    left: 0; /* Keep near the left */
+    width: 15vw; /* Adjust width for mobile */
+    z-index: -2; /* Set behind the images */
+  }
+
+  .squares-container {
+    top: 0; /* Align to the top of the screen */
+    left: 0; /* Align to the left */
+    width: 100vw; /* Use full viewport width */
+    height: auto; /* Allow height to adjust */
+  }
+
+  /* Adjust square positioning for mobile */
+  .square {
+    width: 30px; /* Size down for mobile */
+    height: 30px; /* Size down for mobile */
+  }
+
+  .square1 {
+    top: 20%; /* Adjust position for visibility */
+    left: 5%;
+  }
+
+  .square2 {
+    top: 25%; /* Adjust position for visibility */
+    left: 15%;
+  }
+
+  .square3 {
+    top: 30%; /* Adjust position for visibility */
+    left: 25%;
+  }
+
+  .square4 {
+    top: 35%; /* Adjust position for visibility */
+    left: 20%;
+  }
+
+  .square5 {
+    top: 40%; /* Adjust position for visibility */
+    left: 27%;
+  }
+
+  .square6 {
+    top: 45%; /* Adjust position for visibility */
+    left: 25%;
+  }
+
+  .square7 {
+    top: 50%; /* Adjust position for visibility */
+    left: 30%;
+  }
+}
